@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// svaki podatak je objekt koji sadrzi 4 svojstva (sadrzaj, 
+// datum stvaranja, bool oznaku za vaznost i id)
 const poruke = [
   {
     id: 1,
@@ -21,6 +23,8 @@ const poruke = [
     vazno: true
   }
 ]
+
+// niz poruke proslijeden je kao svojstvo
 const App = (props) => {
   const { poruke } = props
 
@@ -28,9 +32,7 @@ const App = (props) => {
     <div>
       <h1>Poruke</h1>
       <ul>
-        <li>{poruke[0].sadrzaj}</li>
-        <li>{poruke[1].sadrzaj}</li>
-        <li>{poruke[2].sadrzaj}</li>
+        {poruke.map( poruka => <li>{poruka.sadrzaj}</li> )}
       </ul>
     </div>
   )
