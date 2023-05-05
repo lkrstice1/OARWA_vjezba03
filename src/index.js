@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App'
+import './index.css'
 
 // svaki podatak je objekt koji sadrzi 4 svojstva (sadrzaj, 
 // datum stvaranja, bool oznaku za vaznost i id)
