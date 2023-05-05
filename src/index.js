@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Poruka from './components/Poruka';
+import App from './App'
 
 // svaki podatak je objekt koji sadrzi 4 svojstva (sadrzaj, 
 // datum stvaranja, bool oznaku za vaznost i id)
@@ -25,18 +25,5 @@ const poruke = [
   }
 ]
 
-// niz poruke proslijeden je kao svojstvo
-const App = (props) => {
-  return (
-    <div>
-      <h1>Poruke</h1>
-      <ul>
-        {poruke.map( p => 
-          <Poruka key={p.id} poruka={p} />        
-        )}
-      </ul>
-    </div>
-  )
-}
 
 ReactDOM.render(<App poruke={poruke} />,document.getElementById('root'))
