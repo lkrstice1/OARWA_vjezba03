@@ -32,7 +32,11 @@ const App = (props) => {
     <div>
       <h1>Poruke</h1>
       <ul>
-        {poruke.map( poruka => <li>{poruka.sadrzaj}</li> )}
+        {poruke.map( poruka => 
+          <li key={poruka.id}>
+            {poruka.sadrzaj}
+          </li> 
+        )}
       </ul>
     </div>
   )
